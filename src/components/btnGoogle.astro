@@ -1,0 +1,16 @@
+---
+import GoogleIcon from "../components/icons/googleIcon.astro";
+import { SignIn } from "auth-astro/components";
+---
+
+<SignIn
+  provider="google"
+  class="flex rounded px-5 py-3 bg-slate-900 gap-3 hover:bg-slate-800 transition-colors"
+>
+  <span>
+    <GoogleIcon class="size-5" />
+  </span>
+  <span class="text-sm font-light text-gray-300">
+    iniciar sesion con Google
+  </span>
+</SignIn>

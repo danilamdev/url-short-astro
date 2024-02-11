@@ -1,0 +1,37 @@
+---
+import UrlForm from "./urlForm.svelte";
+
+import { client as redis } from "../lib/redis.ts";
+
+import StopMan from "./icons/stop-man.astro";
+import BtnGoogle from "./btnGoogle.astro";
+
+import { getSession } from "auth-astro/server";
+
+import type { LongURL, Session } from "../types";
+
+const session = (await getSession(Astro.request)) as unknown as Session;
+
+let links: LongURL[] = [];
+
+if (session) {
+  const keys = await redis.keys(`${session.user?.email}:*`);
+  const datos = await Promise.all(keys.map((key: string) => redis.get(key)));
+
+  if (datos) links = datos.map((data: unknown) => JSON.parse(data as string));
+}
+---
+
+<div>
+  {
+    !session ? (
+      <div class="py-10 flex justify-center">
+        <BtnGoogle />
+      </div>
+    ) : (
+      <UrlForm client:load {session} {links}>
+        <StopMan slot="stop" class="size-36 fill-transparent" />
+      </UrlForm>
+    )
+  }
+</div>
