@@ -12,6 +12,11 @@ import type { LongURL, Session } from "../types";
 
 const session = (await getSession(Astro.request)) as unknown as Session;
 
+// For testing SESSION
+// const session: Session = {
+//   user: { name: "daniel", email: "dalambarri@gmail.com", image: "" },
+// };
+
 let links: LongURL[] = [];
 
 if (session) {

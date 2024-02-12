@@ -16,25 +16,23 @@
   bind:this={dialog}
   on:close={() => (showModal = false)}
   on:click|self={() => dialog.close()}
-  class=""
+  class="rounded-lg bg-transparent"
 >
   <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <div on:click|stopPropagation>
-    <div
-      class="w-[500px] bg-slate-800 h-60 rounded-lg overflow-hidden flex flex-col"
-    >
+  <div class="" on:click|stopPropagation>
+    <div class="w-[500px] bg-slate-800 h-60 flex flex-col">
       <slot />
       <!-- <button on:click={() => dialog.close()}>close modal</button> -->
       <div class="mt-auto border-t border-gray-500/20">
         <div class="flex gap-5 items-end justify-end px-5 bg-slate-900 py-5">
           <button
             on:click={() => dialog.close()}
-            class="bg-neutral-800 px-4 font-light rounded py-2 hover:bg-neutral-700 transition-colors"
+            class="text-gray-100 bg-neutral-800 px-4 font-light rounded py-2 hover:bg-neutral-700 transition-colors"
             >cancelar</button
           >
           <button
             on:click={handleClick}
-            class="bg-red-500 px-4 font-light rounded py-2 hover:bg-red-600 transition-colors"
+            class="text-white bg-red-500 px-4 font-light rounded py-2 hover:bg-red-600 transition-colors"
             >eliminar</button
           >
         </div>

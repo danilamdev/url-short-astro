@@ -63,7 +63,7 @@
     {/if}
   </button>
   <div class="border-b pb-2 border-slate-700/50 px-2">
-    <p class="text-3xl">
+    <p class="text-3xl text-gray-50">
       {shortUrl?.title || "Sin título"}
     </p>
     <small class="text-gray-600 max-w-[70%] inline-block truncate"
@@ -72,7 +72,7 @@
   </div>
   <div class="flex justify-between pl-2 mt-6 items-center">
     <div class="flex items-center text-lg">
-      <p>shorly.io/</p>
+      <p class="text-white">shorly.io/</p>
       <span class="text-emerald-400">{shortUrl?.hash ?? "sin_hash"}</span>
     </div>
     <a

@@ -76,7 +76,10 @@
 {#if session}
   <div class="flex justify-between items-center border-b border-gray-900 pb-5">
     <div>
-      <p><span class="text-gray-400">Bienvenido</span> {session?.user?.name}</p>
+      <p class="text-white">
+        <span class="text-gray-400">Bienvenido</span>
+        {session?.user?.name}
+      </p>
 
       <small class="text-zinc-600">{session?.user?.email}</small>
     </div>

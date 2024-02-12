@@ -78,7 +78,7 @@
 
       <section class=" flex-1 py-6 flex flex-col items-center gap-2">
         <label class="mb-4 flex items-center gap-4 text-gray-400 w-3/4">
-          <span>Título</span>
+          <span class="text-white">Título</span>
           <input
             type="text"
             class="w-full text-gray-100 bg-transparent border border-slate-900 rounded py-2 px-2 placeholder:text-slate-600 focus:outline focus:outline-emerald-400 focus:outline-1"
