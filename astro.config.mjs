@@ -5,11 +5,15 @@ import tailwind from "@astrojs/tailwind";
 
 // import auth from "auth-astro";
 
+import vercel from "@astrojs/vercel/serverless";
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [svelte(), tailwind()],
-  output: "static",
+  output: "static"
   // adapter: node({
   //   mode: "standalone"
   // })
+  ,
+  adapter: vercel()
 });
