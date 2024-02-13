@@ -17,7 +17,7 @@
 
   function CopyUrl() {
     return () => {
-      navigator.clipboard.writeText("shortly.io/" + shortUrl.hash);
+      navigator.clipboard.writeText("shortlify.site/" + shortUrl.hash);
       isCopied = true;
 
       setTimeout(() => {
@@ -51,7 +51,7 @@
 
   <button
     on:click={CopyUrl()}
-    title={`copiar shortly.io/${shortUrl?.hash}`}
+    title={`copiar shortlify.site/${shortUrl?.hash}`}
     class="bg-transparent transition-colors hover:bg-slate-700 rounded-full p-1 absolute top-2 right-11"
   >
     {#if isCopied}

@@ -88,7 +88,7 @@
         </label>
 
         <div class="flex gap-3 items-center justify-center">
-          <h1 class="text-slate-300 text-5xl">shortly.io/</h1>
+          <h1 class="text-slate-300 text-5xl">shortlify.site/</h1>
           <input
             type="text"
             bind:value={data.hash}
