@@ -42,6 +42,8 @@
       ...links,
     ]);
     shortUrl = { ...apiResponse };
+
+    data.title = "";
   }
 </script>
 
