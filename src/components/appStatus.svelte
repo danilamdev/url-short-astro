@@ -93,11 +93,11 @@
         </label>
 
         <div class="flex gap-3 items-center justify-center">
-          <h1 class="text-slate-300 text-5xl">shortlify.site/</h1>
+          <h1 class="text-slate-300 text-2xl lg:text-5xl">shortlify.site/</h1>
           <input
             type="text"
             bind:value={data.hash}
-            class="bg-slate-900 text-blue-400 px-4 rounded w-48 text-center py-4 text-3xl focus:outline focus:outline-sky-400 focus:outline-1"
+            class="bg-slate-900 text-blue-400 lg:px-4 px-2 rounded lg:w-48 w-28 text-center lg:py-4 py-2 lg:text-3xl text-xl focus:outline focus:outline-sky-400 focus:outline-1"
           />
         </div>
         <span class="text-slate-500 text-sm mt-2"
