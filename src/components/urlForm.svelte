@@ -61,12 +61,12 @@
 
 <PasteBtn {HandlePaste} />
 
-<div class="flex gap-2">
+<div class="flex gap-2 px-5 lg:px-0">
   <input
     type="text"
     placeholder="https://www.laaaaaaaaargaURL.com"
     bind:value={data.longUrl}
-    class="bg-slate-900 text-slate-200 w-full py-3 rounded placeholder:text-gray-600 pl-4 focus:outline focus:outline-emerald-500 focus:outline-2"
+    class="bg-slate-900 text-slate-200 w-full py-3 rounded placeholder:text-sm placeholder:lg:text-base placeholder:text-gray-600 pl-4 focus:outline focus:outline-emerald-500 focus:outline-2"
   />
   <Button {handleClick}>Acortar!</Button>
 </div>
@@ -74,7 +74,9 @@
 <ErrorUrl {errorValidUrl} />
 
 {#if session}
-  <div class="flex justify-between items-center border-b border-gray-900 pb-5">
+  <div
+    class="flex justify-between items-center border-b border-gray-900 pb-5 px-5 lg:px-0"
+  >
     <div>
       <p class="text-white">
         <span class="text-gray-400">Bienvenido</span>
@@ -98,7 +100,7 @@
       </div>
     </div>
   </div>
-  <div class="my-6">
+  <div class="my-6 px-5 lg:px-0">
     {#if $app_store === APP_STATUS.submitted}
       <VerLinksBtn onClick={() => verLinks()}>Ver tus links</VerLinksBtn>
     {/if}

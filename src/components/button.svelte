@@ -6,7 +6,7 @@
 
 <button
   on:click={() => handleClick()}
-  class={`bg-green-300 px-8 rounded font-semibold text-lg relative  py-2.5 text-black duration-300 [transition-timing-function:cubic-bezier(0.175,0.885,0.32,1.275)] active:translate-y-1 active:scale-x-110 active:scale-y-90`}
+  class={`bg-green-300 lg:px-8 px-4 rounded font-semibold text-lg relative py-1 lg:py-2.5 text-black duration-300 [transition-timing-function:cubic-bezier(0.175,0.885,0.32,1.275)] active:translate-y-1 active:scale-x-110 active:scale-y-90`}
 >
   {#if $app_store === APP_STATUS.error}
     <span

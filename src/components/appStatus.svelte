@@ -58,7 +58,10 @@
     </div>
   {:else}
     {#each $linkStore as link, i}
-      <div class="mb-7 card" style={`animation-delay: ${i * 0.2}s`}>
+      <div
+        class="mb-7 card px-5 lg:px-0"
+        style={`animation-delay: ${i * 0.2}s`}
+      >
         <ShortUrlCard shortUrl={link} />
       </div>
     {/each}
